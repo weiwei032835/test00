@@ -189,7 +189,7 @@
                     <!--col_1 開始-->
                     <div class="col_1">
                         <p class="pic">
-                            <img :src="target === 0 ? './images/00.png' : './images/01.png'">
+                            <img :src="target === 0 ? 'images/00.png' : 'images/01.png'">
                         </p>
                         <p>心臟病評斷: <span v-if="target === 0">低風險族群</span><span v-else>高風險族群</span></p>
 
@@ -218,7 +218,7 @@
                                     <span v-else-if="cp === '2'">非心絞痛</span>
                                     <span v-else>無症況</span>
                                 </h4>
-                                <a v-if="cp !== '3'" href="/images/pic01.png" target="_blank">衛教圖1 <i
+                                <a v-if="cp !== '3'" href="images/pic01.png" target="_blank">衛教圖1 <i
                                         class="bi bi-box-arrow-in-up-right"></i></a>
                             </div>
                             <div class="content" v-if="cp !== '3'">
@@ -245,7 +245,7 @@
                                                 mmHg</span>
                                             <span v-else>高血壓危險期：>=140/90 mmHg</span>
                                 </p>
-                                <a v-if="trestbps >= 120" href="/images/pic02.jpg" target="_blank">衛教圖1 <i
+                                <a v-if="trestbps >= 120" href="images/pic02.jpg" target="_blank">衛教圖1 <i
                                         class="bi bi-box-arrow-in-up-right"></i></a>
                             </div>
                             <div class="content">
@@ -292,7 +292,7 @@
                                             <span v-else-if="chol >= 200 && chol <= 239">膽固醇偏高：200-239 mg/dL</span>
                                             <span v-else>膽固醇過高：≥ 240 mg/dL</span>
                                 </p>
-                                <a v-if="chol >= 200" href="/images/pic03.jpg" target="_blank">衛教圖1 <i
+                                <a v-if="chol >= 200" href="images/pic03.jpg" target="_blank">衛教圖1 <i
                                         class="bi bi-box-arrow-in-up-right"></i></a>
                             </div>
                             <div class="content">
@@ -328,7 +328,7 @@
                                             <span v-if="fbs === '0'">血糖正常：<= 120 mg/dl</span>
                                                     <span v-else>糖尿病前期：> 120 mg/dl</span>
                                         </p>
-                                        <a v-if="fbs === '1'" href="/images/pic04.jpg" target="_blank">衛教圖1 <i
+                                        <a v-if="fbs === '1'" href="images/pic04.jpg" target="_blank">衛教圖1 <i
                                                 class="bi bi-box-arrow-in-up-right"></i></a>
                             </div>
                             <div class="content">
@@ -361,7 +361,7 @@
                                     <span v-else-if="thalach >= 60 && thalach <= 100">心率正常，請繼續維持健康生活型態。</span>
                                     <span v-else>心率偏低，請注意監控數值，避免缺氧、昏厥，必要時就醫。</span>
                                 </p>
-                                <a v-if="thalach > 220" href="/images/pic05.jpg" target="_blank">衛教圖1 <i
+                                <a v-if="thalach > 220" href="images/pic05.jpg" target="_blank">衛教圖1 <i
                                         class="bi bi-box-arrow-in-up-right"></i></a>
                             </div>
                             <div class="content">
