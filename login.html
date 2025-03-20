@@ -12,7 +12,7 @@
         integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
     <link rel="stylesheet" href="css/style.css">
     <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
-
+    <script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/jquery.validate.min.js"></script>
 </head>
 
 <body class="login">
@@ -35,8 +35,8 @@
 
                 <!-- input 開始 -->
                 <p>
-                    <input class="inputEm required" type="text" name="myEmail" placeholder="Mike"
-       validate="required:true, minLength:3" required>
+                    <input class="inputEm required" type="text" name="myName" placeholder="Mike" validate="required:true, minLength:3"
+                        required>
                     <span>姓名</span>
                 </p>
                 <!-- input 結束 -->
@@ -54,7 +54,7 @@
 
                 <!-- input 開始 -->
                 <p>
-                    <input class="inputPw" type="password" name="myInputPw" placeholder="預設0000" 
+                    <input class="inputPw" type="password" name="myInputPw" placeholder="預設0000"
                         data-toggle-pw="false" minlength="5" required>
                     <span>密碼</span>
                     <i class="btnShowPw fas"></i>
@@ -63,10 +63,8 @@
 
                 <button type="submit" class="btn_submit">送出</button>
 
-
             </div>
             <!--area_login 結束-->
-
 
         </form>
         <!--form 結束-->
@@ -81,12 +79,7 @@
     </div>
     <!--wrapper_box 結束-->
 
-
-
-
-
     <script>
-
         //登入區 表情切換 驗證 ========================
         $(function () {
 
@@ -155,15 +148,6 @@
                 }
             });
 
-            //密碼驗證 
-            $.validator.setDefaults({
-                submitHandler: function () {
-                    alert("表單送出了");
-                }
-            });
-            $("#myForm").validate();
-
-
             //表單驗證和提交
             $("#myForm").validate({
                 submitHandler: function (form) {
@@ -190,7 +174,6 @@
                 }
             });
         });
-
     </script>
 
 </body>
