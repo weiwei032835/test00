@@ -24,7 +24,7 @@
 
             <!--area_login 開始-->
             <div class="area_login">
-                <h3><span>心肝檢測</span></h3>
+                <h3><span>心肝寶貝</span></h3>
                 <!-- emUser 開始 -->
                 <p class="emUser"></p>
                 <!-- emUser 結束 -->
@@ -35,7 +35,7 @@
 
                 <!-- input 開始 -->
                 <p>
-                    <input class="inputEm" type="text" name="myEmail" placeholder="預設0000" class="required"
+                    <input class="inputEm" type="text" name="myEmail" placeholder="Mike" class="required"
                         minlength="10" validate="required:true, minLength:10" required>
                     <span>姓名</span>
                 </p>
@@ -44,7 +44,7 @@
 
                 <!-- input 開始 -->
                 <p>
-                    <input class="inputEm" type="text" name="myEmail" placeholder="預設0000" class="required"
+                    <input class="inputEm" type="text" name="myEmail" placeholder="mike1742447947@email.com" class="required"
                         minlength="10" validate="required:true, minLength:10" required>
                     <span>信箱</span>
                 </p>
@@ -61,7 +61,7 @@
                 </p>
                 <!-- input 結束 -->
 
-                <a href="index_heart_03demo.html" class="btn_submit">送出</a>
+                <button type="submit" class="btn_submit">送出</button>
 
 
             </div>
@@ -169,17 +169,18 @@
                 submitHandler: function (form) {
                     var formData = {
                         email: $("input[name='myEmail']").val(),
-                        name: $("input[name='myName']").val()
+                        name: $("input[name='myName']").val(),
+                        password: $("input[name='myInputPw']").val()
                     };
 
                     $.ajax({
-                        url: 'https://ml-predict-api-406220573568.asia-east1.run.app/api/user/login', // 替換為你的 API 端點
+                        url: 'https://ml-predict-api-406220573568.asia-east1.run.app/api/user/login',
                         type: 'POST',
                         contentType: 'application/json',
                         data: JSON.stringify(formData),
                         success: function (response) {
                             alert("資料已成功送出");
-                            window.location.href = "index_heart_03demo.html"; // 成功後跳轉到 index_heart.html
+                            window.location.href = "index_heart_03demo.html"; // 成功後跳轉到 index_heart_03demo.html
                         },
                         error: function (error) {
                             alert("資料送出失敗");
