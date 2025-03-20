@@ -464,25 +464,18 @@
                             thal: this.thal
                         };
         
-                        // 模擬 API 回應
-                        this.target = 1; // 假設 API 回傳的結果
-                        this.result = '模擬結果';
-                        this.advice = '模擬建議';
-                        this.showResults = true; // 計算完成後顯示結果區域
-        
                         // 發送資料到後端 API
-                        // axios.post('https://your-api-endpoint', formData)
-                        //     .then(response => {
-                        //         // 假設 API 回傳的結果包含 target, result 和 advice
-                        //         this.target = response.data.target;
-                        //         this.result = response.data.result;
-                        //         this.advice = response.data.advice;
-                        //         this.showResults = true; // 計算完成後顯示結果區域
-                        //         console.log('Data saved successfully:', response.data);
-                        //     })
-                        //     .catch(error => {
-                        //         console.error('Error saving data:', error);
-                        //     });
+                        axios.post('https://ml-predict-api-406220573568.asia-east1.run.app/api/disease/heart/records', formData)
+                            .then(response => {
+                                // 假設 API 回傳的結果包含 target, result 和 advice
+                                this.target = response.data.target;
+                                this.result = response.data.result;
+                                this.advice = response.data.advice;
+                                console.log('Data saved successfully:', response.data);
+                            })
+                            .catch(error => {
+                                console.error('Error saving data:', error);
+                        });
                     }
                 }
             });
